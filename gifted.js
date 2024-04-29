@@ -12,15 +12,15 @@ app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
 app.use('/',async (req, res, next) => {
-res.sendFile(__path + '/main.html')
+res.sendFile(__path + '/gifted.html')
 })
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
     console.log(`
-Don't Forgot To Give Star
+Deployment Successful!
 
- Server running on http://localhost:` + PORT)
+ Gifted-Session-Server Running on http://localhost:` + PORT)
 })
 
 module.exports = app
