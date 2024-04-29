@@ -1,6 +1,6 @@
 const PastebinAPI = require('pastebin-js'),
 pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
-const {makeid} = require('./id');
+const {giftedid} = require('./id');
 const express = require('express');
 const fs = require('fs');
 let router = express.Router()
@@ -18,7 +18,7 @@ function removeFile(FilePath){
     fs.rmSync(FilePath, { recursive: true, force: true })
  };
 router.get('/', async (req, res) => {
-    const id = makeid();
+    const id = giftedid();
     let num = req.query.number;
         async function GIFTED_MD_PAIR_CODE() {
         const {
