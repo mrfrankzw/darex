@@ -17,11 +17,11 @@
 
 
 
-[`ℹ️Contact Owner`](https://wa.me/message/NHCZC5DSOEUXB1)
+[`ℹ️Contact Owner`](https://t.me/giftedmd)
 
 FORK THIS REPOSITORY FIRST (A MUST) 
     <br>
-<a href="https://github.com/mouricedevs/Session-Generator/fork"><img title="WEB" src="https://img.shields.io/badge/FORK Gifted-QR?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/mouricedevs/gifted-pair-code/fork"><img title="WEB" src="https://img.shields.io/badge/FORK Gifted-QR?color=black&style=for-the-badge&logo=stackshare"></a>
 
 Now Deploy On Heroku
     <br>
