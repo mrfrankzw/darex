@@ -1,6 +1,6 @@
 {
     "description": "qr",
-    "main": "gifted.js",
+    "main": "./gifted.js",
   "engines" : { 
     "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
