@@ -71,14 +71,13 @@ ______________________________
 ║❒ 𝐘𝐨𝐮𝐭𝐮𝐛𝐞: _youtube.com/@giftedtechnexus_
 ║❒ 𝐎𝐰𝐧𝐞𝐫: _https://wa.me/message/NHCZC5DSOEUXB1_
 ║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/Gifted-Md_
-║❒ 𝐖𝐚𝐆𝐫𝐨𝐮𝐩: _https://chat.whatsapp.com/ExdDIwx7j36Ci7VP0TbCYw_
 ║❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
-║❒ 𝐖𝐚𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲: _https://chat.whatsapp.com/JzEI5zUtHSh01rxYL1bkmy_
 ║ 💜💜💜
 ╚══════════════╝ 
  *©²⁰²⁴ ᴳᴵᶠᵀᴱᴰ ᵂᴴᴬᵀˢᴬᴾᴾ ᴮᴼᵀˢ*
 ______________________________
 
+Use your Session ID Above to complete Bot Deployment.
 Don't Forget To Give Star⭐ To My Repo`
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
