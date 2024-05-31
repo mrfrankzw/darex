@@ -1,5 +1,5 @@
 {
-    "description": "qr",
+    "description": "gifted-code",
     "main": "./gifted.js",
   "engines" : { 
     "npm" : ">=9.7.2",
@@ -14,7 +14,6 @@
     "@whiskeysockets/baileys": "^6.5.0",
     "maher-zubair-baileys": "^6.6.5",
     "qrcode": "^1.5.3",
-    "@hapi/boom": "^10.0.1",
     "awesome-phonenumber": "^2.64.0",
     "pino": "^8.1.0",
     "phone" : "3.1.30",
@@ -22,6 +21,5 @@
     "pastebin-js": "^1.0.6",
     "express": "^4.18.1",
     "path": "^0.12.7"
-    "fs-extra": "latest"
    }
 }
