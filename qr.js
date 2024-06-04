@@ -27,7 +27,7 @@ const {
 	readFile
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
-	const id = makeid();
+	const id = giftedid();
 	async function FLASH_MD_QR_CODE() {
 		const {
 			state,
@@ -59,8 +59,6 @@ router.get('/', async (req, res) => {
 				   let session = await Qr_Code_By_France_King.sendMessage(Qr_Code_By_France_King.user.id, { text: 'Gifted;;;' + b64data });
 	
 				   let FLASH_MD_TEXT = `
-*🚨 CONGRATULATIONS 🎊*
-
 *✅sᴇssɪᴏɴ ᴄᴏɴɴᴇᴄᴛᴇᴅ✅*
 *Made With 💜*
 *By ɢɪғᴛᴇᴅ ᴛᴇᴄʜ💜*
