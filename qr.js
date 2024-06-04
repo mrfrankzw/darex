@@ -1,6 +1,6 @@
 const PastebinAPI = require('pastebin-js'),
 pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
-const {makeid} = require('./id');
+const {giftedid} = require('./id');
 const QRCode = require('qrcode');
 const express = require('express');
 const path = require('path');
@@ -40,11 +40,11 @@ router.get('/', async (req, res) => {
 				logger: pino({
 					level: "silent"
 				}),
-				browser: ["FLASH-MD", "FLASH-MD", ""],
+				browser: ["Gifted", "GiftedQrCode", ""],
 			});
 
 			Qr_Code_By_France_King.ev.on('creds.update', saveCreds)
-			Qr_Code_By_France_Kingr.ev.on("connection.update", async (s) => {
+			Qr_Code_By_France_King.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_France_King.sendMessage(Qr_Code_By_France_King.user.id, { text: 'FLASH-MD-WA-BOT;;;=>' + b64data });
+				   let session = await Qr_Code_By_France_King.sendMessage(Qr_Code_By_France_King.user.id, { text: 'Gifted;;;' + b64data });
 	
 				   let FLASH_MD_TEXT = `
 *🚨 CONGRATULATIONS 🎊*
