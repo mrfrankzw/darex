@@ -13,7 +13,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #0b4fb4; /* Gifted Tech */
+      background-image: url('https://telegra.ph/file/2b86419b7b2cdb359d9cf.jpg'); /* Gifted Tech */
       font-family: Arial, sans-serif;
     }
 
@@ -27,12 +27,12 @@
       width: 300px;
       height: 330px;
       padding: 20px;
-      position: relative;
+      position: center;
       text-align: center;
-      background-color: rgba(113, 3, 76, 0.808); /* Gifted Tech */
-      border-radius: 50px;
+      background-color: blue; /* Gifted Tech */
+      border-radius: 60px;
       transform: perspective(1000px) rotateY(0deg);
-      box-shadow: 0 0 40px rgb(231, 252, 1);
+      box-shadow: 0 0 30px rgb(231, 252, 1);
       position: relative;
     }
 
@@ -42,10 +42,11 @@
 
     .input-container {
       display: flex;
-      background: linear-gradient(45deg, #6704e0aa 0%, #32CD32 100%); /* Gifted Tech */
+      background: linear-gradient(45deg, yellow 0%, red 100%); /* Gifted Tech */
       border-radius: 1rem;
       padding: 0.3rem;
       gap: 0.3rem;
+      border-right: 5px;
       max-width: 300px; /* Gifted Tech */
       width: 100%;
     }
@@ -53,28 +54,30 @@
     .input-container input {
       border-radius: 0.8rem 0 0 0.8rem;
       background: #fafaf9; /* Gifted Tech */
-      color: blue; /* Giftd Tech */
-      border: none;
-      border-left: 2px solid #f709b7e5; /* Gifted Tech */
-      width: 89%;
+      color: black; /* Giftd Tech */
+      border: 3px black;
+      font-size: 22;
+      border-left: 5px solid purple; /* Gifted Tech */
+      border-right: 5px solid black; /* Gifted Tecg */
+      width: 90%;
       flex-basis: 75%;
       padding: 1rem;
       transition: all 0.2s ease-in-out;
     }
 
     .input-container input:focus {
-      border-left: 2px solid #32CD32; /* Gifted Tech */
+      border-left: 5px solid green; /* Gifted Tech */
       outline: none;
     }
 
     .input-container button {
       flex-basis: 25%;
-      padding: 1rem;
+      padding: 0.5rem;
       background: linear-gradient(135deg, #32CD32 0%, #007bff 100%); /* Gifted Tech */
-      font-weight: 900;
-      letter-spacing: 0.3rem;
+      font-weight: 1000;
+      letter-spacing: 0.2rem;
       text-transform: uppercase;
-      color: #fff; /* Gifted Tech */
+      color: white; /* Gifted Tech */
       border: none;
       width: 100%;
       border-radius: 0 1rem 1rem 0;
@@ -86,9 +89,31 @@
     }
 
     .centered-text {
-      color: #fff; /* Gifted Tech */
+      font-weight: 1000;
+      font-size: 12px;
+      color: white; /* Gifted Tech */
       text-align: center;
     }
+  
+     .gifted-text {
+      font-weight: 1000;
+      font-size: 12px;
+      color: black; /* Gifted Tech */
+      text-align: center;
+    }
+  
+     .fa-user {
+      font-size: 20px;
+      color: black; /* Gifted Tech */
+      text-align: center;
+    }
+  
+  .gift {
+    color: yellow;
+    font-weight: 1000;
+    font-size: 19px;
+    text-align: center;
+  }
   </style>
 </head>
 <body>
@@ -98,15 +123,15 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">GIFTED MD PAIRING CODE</h3>
-            <br>
-            <h6 class="centered-text">Enter Your Whatsapp Number With Country Code Without (+).</h6>
-            <h6 class="centered-text">©2024 •ɢɪғᴛᴇᴅ ᴛᴇᴄʜ•</h6>
+            <h3 class="gift">GIFTED MD PAIRING CODE</h3>
+            </br>
+            <h6 class="centered-text">Enter Your Whatsapp Number With Country Code</h6>
+            <h6 class="gifted-text">•••ɢɪғᴛᴇᴅ ᴛᴇᴄʜ ᴅᴇᴠs•••</h6>
             <div class="input-container">
-                <input placeholder="Eg 254728782591" type="number" id="number" placeholder="Enter Your Whatsapp Number With Country Code Without (+)." name="">
+                <input placeholder=" 𝙀𝙜 𝟮𝟱𝟰𝟳𝟭𝟮𝟯𝙭𝙭𝙭𝙭𝙭" type="number" id="number" placeholder="Enter Your Whatsapp Number With Country Code Without (+)." name="">
                 <button id="submit">Enter</button>
             </div>
-            <a id="waiting-message" class="centered-text" style="display: none;">Getting Code...</a>
+            <a id="waiting-message" class="fa-user" style="display: none;">Getting Code...</a>
             <br>
             <br>
             <main id="pair"></main>
@@ -129,7 +154,7 @@
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('YOUR CODE: ', ''));
       obj.innerText = "COPIED";
-      obj.style = "color: blue; font-weight: bold";
+      obj.style = "color: yellow; font-weight: bold";
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
@@ -141,7 +166,7 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color: red; font-weight: bold;">Enter Your Whatsapp Number With Country Code Without (+).</a><br><br>';
+        a.innerHTML = '<a style="color: black; font-weight: bold;">Enter Your Whatsapp Number With Country Code Without (+).</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
         a.innerHTML = '<a style="color: red; font-weight: bold;">Invalid Number Format</a><br><br>';
       } else {
@@ -161,13 +186,13 @@
         });
         c.type = "text";
         c.value = "+" + bb;
-        c.style = "color: black; font-size: 20px";
-        a.innerHTML = '<a style="color: white; font-weight: bold;">Generating Code...</a><br><br>';
+        c.style = "color: black; font-size: 22px";
+        a.innerHTML = '<a style="color: yellow; font-weight: bold;">Generating Code...</a><br><br>';
         let { data } = await axios(`/code?number=${bc}`);
         let code = data.code || "Service is Currently Unavailable";
-        a.innerHTML = '<font id="copy" onclick="Copy()" style="color: white; font-weight: bold;" size="5">YOUR CODE: <span style="color: yellow; font-weight: bold;">' + code + '</span></font><br><br><br>';
+        a.innerHTML = '<font id="copy" onclick="Copy()" style="color: black; font-weight: bold;" size="5">YOUR CODE: <span style="color: white; font-weight: bold;">' + code + '</span></font><br><br><br>';
       }
     });
   </script>
 </body>
-</html>
+    </html>
