@@ -59,9 +59,7 @@ router.get('/', async (req, res) => {
 				   let session = await Qr_Code_By_France_King.sendMessage(Qr_Code_By_France_King.user.id, { text: 'Gifted;;;' + b64data });
 	
 				   let FLASH_MD_TEXT = `
-*✅sᴇssɪᴏɴ ᴄᴏɴɴᴇᴄᴛᴇᴅ✅*
-*Made With 💜*
-*By ɢɪғᴛᴇᴅ ᴛᴇᴄʜ💜*
+*✅sᴇssɪᴏɴ ɪᴅ ɢᴇɴᴇʀᴀᴛᴇᴅ✅*
 ______________________________
 ╔════◇
 ║『 𝐘𝐎𝐔'𝐕𝐄 𝐂𝐇𝐎𝐒𝐄𝐍 𝐆𝐈𝐅𝐓𝐄𝐃 𝐌𝐃 』
@@ -71,15 +69,17 @@ ______________________________
 ╔═════◇
 ║ 『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
 ║❒ 𝐘𝐨𝐮𝐭𝐮𝐛𝐞: _youtube.com/@giftedtechnexus_
-║❒ 𝐎𝐰𝐧𝐞𝐫: _https://wa.me/message/NHCZC5DSOEUXB1_
+║❒ 𝐎𝐰𝐧𝐞𝐫: _https://t.me/giftedmd_
 ║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/Gifted-Md_
 ║❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
+║❒ 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥: _https://youtu.be/seXFFjtnU64?si=yvUXm4UWYcX8ZJDp_
 ║ 💜💜💜
 ╚══════════════╝ 
- *©²⁰²⁴ ᴳᴵᶠᵀᴱᴰ ᵂᴴᴬᵀˢᴬᴾᴾ ᴮᴼᵀˢ*
+ 𝗚𝗜𝗙𝗧𝗘𝗗-𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝟰.𝟬.𝟬
 ______________________________
 
-Use your Session ID Above to complete Bot Deployment.
+Use your Session ID Above to Deploy your Bot.
+Check on Tutorial for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
 Don't Forget To Give Star⭐ To My Repo`
 	 await Qr_Code_By_France_King.sendMessage(Qr_Code_By_France_King.user.id, {text:FLASH_MD_TEXT},{quoted:session})
 
