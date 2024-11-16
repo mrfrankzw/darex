@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: 'Gifted;;;' + b64data });
+               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: 'Gifted~' + b64data });
 
                let GIFTED_MD_TEXT = `
 *✅sᴇssɪᴏɴ ɪᴅ ɢᴇɴᴇʀᴀᴛᴇᴅ✅*
@@ -68,12 +68,12 @@ ______________________________
 ║ 『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
 ║❒ 𝐘𝐨𝐮𝐭𝐮𝐛𝐞: _youtube.com/@giftedtechnexus_
 ║❒ 𝐎𝐰𝐧𝐞𝐫: _https://t.me/giftedmd_
-║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/Gifted-Md_
+║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/gifted_
 ║❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
 ║❒ 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥: _https://youtu.be/seXFFjtnU64?si=yvUXm4UWYcX8ZJDp_
 ║ 💜💜💜
 ╚══════════════╝ 
- 𝗚𝗜𝗙𝗧𝗘𝗗-𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝟰.𝟬.𝟬
+ 𝗚𝗜𝗙𝗧𝗘𝗗-𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 5.𝟬.𝟬
 ______________________________
 
 Use your Session ID Above to Deploy your Bot.
