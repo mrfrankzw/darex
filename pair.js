@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                     
-                const auth_path = './temp/';
+                // const auth_path = './temp/';
 
                     function randomMegaId(length = 6, numberLength = 4) {
                       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -68,7 +68,7 @@ router.get('/', async (req, res) => {
                         return `${result}${number}`;
                           }
 
-                        const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
+                        const mega_url = await upload(fs.createReadStream(data), `${randomMegaId()}.json`);
                         console.log(mega_url);
 
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
