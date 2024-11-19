@@ -3,7 +3,12 @@ const express = require('express');
 const fs = require('fs');
 let router = express.Router();
 const pino = require("pino");
-const mega = require("megajs");
+// const mega = require("megajs");
+const {
+    Storage,
+    File
+} = require("megajs");
+
 const {
     default: Gifted_Tech,
     useMultiFileAuthState,
@@ -12,30 +17,50 @@ const {
     Browsers
 } = require("@whiskeysockets/baileys");
 
-const auth = {
+/* const auth = {
     email: 'giftedapis@gmail.com',
     password: 'Ngire@2024#',
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
-}
+} */
 
-const upload = (data, name) => {
-    return new Promise((resolve, reject) => {
-        try {
-            const storage = new mega.Storage(auth, () => {
-                data.pipe(storage.upload({name: name, allowUploadBuffering: true}));
-                storage.on("add", (file) => {
-                    file.link((err, url) => {
-                        if (err) throw err;
-                        storage.close()
-                        resolve(url);
-                    });
-                });
-            });
-        } catch (err) {
-            reject(err);
+const randomMegaId = (length = 6, numberLength = 4) => {
+                        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                        let result = '';
+                        for (let i = 0; i < length; i++) {
+                            result += characters.charAt(Math.floor(Math.random() * characters.length));
+                        }
+                        const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                        return `${result}${number}`;
+                    };
+
+async function uploadCredsToMega(credsPath) {
+    try {
+        const storage = await new Storage({
+  email: 'giftedapis@gmail.com',
+  password: 'Ngire@2024#'
+}).ready
+        console.log('Mega storage initialized.');
+
+        if (!fs.existsSync(credsPath)) {
+            throw new Error(`File not found: ${credsPath}`);
         }
-    });
-};
+
+       const fileSize = fs.statSync(credsPath).size;
+        const uploadResult = await storage.upload({
+            name: `${randomMegaId}.json`,
+            size: fileSize
+        }, fs.createReadStream(credsPath)).complete;
+
+        console.log('Session uploaded to Mega successfully.');
+        const fileNode = storage.files[uploadResult.nodeId];
+        const megaUrl = await fileNode.link();
+        console.log(`Session MegaUrl: ${megaUrl}`);
+        return megaUrl;
+    } catch (error) {
+        console.error('Error uploading to Mega:', error);
+        throw error;
+    }
+}
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
@@ -88,7 +113,7 @@ router.get('/', async (req, res) => {
                     }
 
                     // Upload the file to Mega
-                    const randomMegaId = (length = 6, numberLength = 4) => {
+                   /* const randomMegaId = (length = 6, numberLength = 4) => {
                         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                         let result = '';
                         for (let i = 0; i < length; i++) {
@@ -96,14 +121,23 @@ router.get('/', async (req, res) => {
                         }
                         const number = Math.floor(Math.random() * Math.pow(10, numberLength));
                         return `${result}${number}`;
-                    };
+                    }; */
 
-                    const megaUrl = await upload(fs.createReadStream(filePath), `${randomMegaId()}.json`);
-                    console.log(megaUrl);
+                    
+          const megaUrl = await uploadCredsToMega(filePath);
+
+          const sid = megaUrl.includes("https://mega.nz/file/")
+            ? 'Gifted~' + megaUrl.split("https://mega.nz/file/")[1]
+            : 'Error: Invalid URL';
+          
+          console.log(sid)
+
+                    /* const megaUrl = await upload(fs.createReadStream(filePath), `${randomMegaId()}.json`);
+                    console.log(megaUrl); 
 
                     const stringSession = megaUrl.replace('https://mega.nz/file/', '');
                     const sid = `Gifted~${stringSession}`;
-                    console.log(sid);
+                    console.log(sid); */
 
                     const session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: sid });
 
