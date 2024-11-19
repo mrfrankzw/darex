@@ -1,5 +1,5 @@
-const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
+// const PastebinAPI = require('pastebin-js'),
+// pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
 const {giftedid} = require('./id');
 const express = require('express');
 const fs = require('fs');
@@ -34,7 +34,8 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: ['Ubuntu', 'Chrome', '20.0.04']
+                browser: Browsers.macOS("Safari")
+                // browser: ['Ubuntu', 'Chrome', '20.0.04']
              });
              if(!Pair_Code_By_Gifted_Tech.authState.creds.registered) {
                 await delay(1500);
