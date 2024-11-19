@@ -5,13 +5,14 @@ const express = require('express');
 const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
+const { upload } = require('./mega');
 const {
     default: Gifted_Tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
     Browsers
-} = require("maher-zubair-baileys");
+} = require("@whiskeysockets/baileys");
 
 function removeFile(FilePath){
     if(!fs.existsSync(FilePath)) return false;
@@ -53,8 +54,28 @@ router.get('/', async (req, res) => {
                 await delay(5000);
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
-               let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: 'Gifted~' + b64data });
+                    
+                const auth_path = './temp/';
+
+                    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                      let result = '';
+                      for (let i = 0; i < length; i++) {
+                      result += characters.charAt(Math.floor(Math.random() * characters.length));
+                        }
+                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                        return `${result}${number}`;
+                        }
+
+                        const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
+                        console.log(mega_url);
+
+                        const string_session = mega_url.replace('https://mega.nz/file/', '');
+
+                        const sid = `Gifted~${string_session}`;
+                        console.log(sid);
+                
+               // let b64data = Buffer.from(data).toString('base64');
+               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: sid });
 
                let GIFTED_MD_TEXT = `
 *✅sᴇssɪᴏɴ ɪᴅ ɢᴇɴᴇʀᴀᴛᴇᴅ✅*
