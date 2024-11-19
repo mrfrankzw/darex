@@ -2,7 +2,6 @@
     "description": "gifted-code",
     "main": "./gifted.js",
   "engines" : { 
-    "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
     },
     "scripts": {
@@ -17,6 +16,7 @@
     "awesome-phonenumber": "^2.64.0",
     "megajs": "^1.1.0",
     "pino": "^8.1.0",
+    "path": "^0.12.7",
     "phone" : "3.1.30",
     "body-parser": "^1.20.1",
     "pastebin-js": "^1.0.6",
