@@ -91,18 +91,17 @@ ______________________________
 ╚══════════════╝
 ╔═════◇
 ║ 『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ 𝐘𝐨𝐮𝐭𝐮𝐛𝐞: _youtube.com/@giftedtechnexus_
-║❒ 𝐎𝐰𝐧𝐞𝐫: _https://t.me/giftedmd_
+║❒ 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥: _youtube.com/@giftedtechnexus_
+║❒ 𝐎𝐰𝐧𝐞𝐫: _https://t.me/mouricedevs_
 ║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/gifted_
 ║❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
-║❒ 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥: _https://youtu.be/seXFFjtnU64?si=yvUXm4UWYcX8ZJDp_
 ║ 💜💜💜
 ╚══════════════╝ 
  𝗚𝗜𝗙𝗧𝗘𝗗-𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 5.𝟬.𝟬
 ______________________________
 
 Use your Session ID Above to Deploy your Bot.
-Check on Tutorial for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
+Check on YouTube Channel for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
 Don't Forget To Give Star⭐ To My Repo`;
                     await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: GIFTED_MD_TEXT }, { quoted: session });
 
