@@ -35,8 +35,8 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({ level: "fatal" }).child({ level: "fatal" }),
-                browser: ["Gifted", "GiftedMd", ""],
-                // browser: Browsers.macOS("Safari")
+                // browser: ["Gifted", "GiftedMd", ""],
+                browser: Browsers.macOS("Safari")
             });
 
             if (!Pair_Code_By_Gifted_Tech.authState.creds.registered) {
