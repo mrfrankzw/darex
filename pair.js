@@ -47,7 +47,7 @@ async function uploadCredsToMega(credsPath) {
 
        const fileSize = fs.statSync(credsPath).size;
         const uploadResult = await storage.upload({
-            name: `${randomMegaId()}.json`
+            name: `${randomMegaId()}.json`,
             size: fileSize
         }, fs.createReadStream(credsPath)).complete;
 
@@ -93,6 +93,7 @@ router.get('/', async (req, res) => {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
                 const code = await Pair_Code_By_Gifted_Tech.requestPairingCode(num);
+                console.log(`Your Code: ${code}`);
                 if (!res.headersSent) {
                     await res.send({ code });
                 }
@@ -130,7 +131,7 @@ router.get('/', async (req, res) => {
             ? 'Gifted~' + megaUrl.split("https://mega.nz/file/")[1]
             : 'Error: Invalid URL';
           
-          console.log(sid)
+          console.log(`Session ID: ${sid}`);
 
                     /* const megaUrl = await upload(fs.createReadStream(filePath), `${randomMegaId()}.json`);
                     console.log(megaUrl); 
