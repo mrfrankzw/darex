@@ -23,15 +23,15 @@ const {
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
 } */
 
-const randomMegaId = (length = 6, numberLength = 4) => {
-                        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                        let result = '';
-                        for (let i = 0; i < length; i++) {
-                            result += characters.charAt(Math.floor(Math.random() * characters.length));
+function randomMegaId(length = 6, numberLength = 4) {
+                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                      let result = '';
+                      for (let i = 0; i < length; i++) {
+                      result += characters.charAt(Math.floor(Math.random() * characters.length));
                         }
-                        const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
                         return `${result}${number}`;
-                    };
+                        }
 
 async function uploadCredsToMega(credsPath) {
     try {
@@ -47,7 +47,7 @@ async function uploadCredsToMega(credsPath) {
 
        const fileSize = fs.statSync(credsPath).size;
         const uploadResult = await storage.upload({
-            name: `${randomMegaId}.json`,
+            name: `${randomMegaId()}.json`
             size: fileSize
         }, fs.createReadStream(credsPath)).complete;
 
