@@ -1,6 +1,7 @@
 {
-    "description": "gifted-code",
-    "main": "./gifted.js",
+  "description": "gifted-code",
+  "main": "./gifted.js",
+  "type": "commonjs",
   "engines" : { 
     "node" : ">=20.0.0"
     },
