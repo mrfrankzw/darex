@@ -218,10 +218,23 @@
         let { data } = await axios(`/code?number=${bc}`);
         let code = data.code || "❗ Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
-        // Hide the loading spinner when the process is complete
         document.getElementById("loading-spinner").style.display = "none";
       }
     });
   </script>
 </body>
   </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
