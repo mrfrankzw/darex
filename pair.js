@@ -27,7 +27,7 @@ async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
   email: 'giftedapis@gmail.com', // // Your Mega A/c Email Here
-  password: '' // Your Mega A/c Password Here
+  password: 'Ngire@2024#' // Your Mega A/c Password Here
 }).ready
         console.log('Mega storage initialized.');
         if (!fs.existsSync(credsPath)) {
@@ -147,3 +147,10 @@ Don't Forget To Give Star⭐ To My Repo`;
 });
 
 module.exports = router;
+
+
+
+
+
+
+
