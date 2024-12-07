@@ -1,5 +1,5 @@
 {
-  "description": "gifted-code",
+  "description": "gifted-pair-code",
   "main": "./gifted.js",
   "type": "commonjs",
   "engines" : { 
@@ -13,7 +13,7 @@
   "author": "Gifted Tech",
   "license": "GPL-3.0 license",
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.6.0",
+    "gifted-baileys": "^1.5.1",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
     "megajs": "^1.1.0",
