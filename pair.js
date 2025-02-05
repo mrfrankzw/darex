@@ -1,4 +1,4 @@
-const { giftedid } = require('./id'); // Ensure this module exports `giftedid`
+const { giftedid } = require('./id'); 
 const express = require('express');
 const fs = require('fs');
 let router = express.Router();
@@ -62,7 +62,7 @@ function removeFile(FilePath) {
 
 // Router to handle pairing code generation
 router.get('/', async (req, res) => {
-    const id = giftedid(); // Ensure `giftedid` is defined
+    const id = giftedid(); 
     let num = req.query.number;
 
     async function GIFTED_PAIR_CODE() {
