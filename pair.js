@@ -28,8 +28,8 @@ function randomMegaId(length = 6, numberLength = 4) {
 async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
-            email: 'giftedapis@gmail.com', // Your Mega A/c Email Here
-            password: '' // Your Mega A/c Password Here
+            email: 'Efkidgamer@gmail.com', // Your Mega A/c Email Here
+            password: 'f..vA7HTfu:VeQT' // Your Mega A/c Password Here
         }).ready;
         console.log('Mega storage initialized.');
 
@@ -105,7 +105,7 @@ router.get('/', async (req, res) => {
 
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'Gifted~' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'SUBZERO-MD~' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     console.log(`Session ID: ${sid}`);
@@ -113,27 +113,22 @@ router.get('/', async (req, res) => {
                     const session = await Gifted.sendMessage(Gifted.user.id, { text: sid });
 
                     const GIFTED_TEXT = `
-*✅sᴇssɪᴏɴ ɪᴅ ɢᴇɴᴇʀᴀᴛᴇᴅ✅*
-______________________________
-╔════◇
-║『 𝐘𝐎𝐔'𝐕𝐄 𝐂𝐇𝐎𝐒𝐄𝐍 𝐆𝐈𝐅𝐓𝐄𝐃 𝐌𝐃 』
-║ You've Completed the First Step
-║ to Deploy a Whatsapp Bot.
-╚══════════════╝
-╔═════◇
-║ 『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥: _youtube.com/@giftedtechnexus_
-║❒ 𝐎𝐰𝐧𝐞𝐫: _https://t.me/mouricedevs_
-║❒ 𝐑𝐞𝐩𝐨: _https://github.com/mouricedevs/giiftedmd_
-║❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
-║ 💜💜💜
-╚══════════════╝ 
- 𝗚𝗜𝗙𝗧𝗘𝗗-𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 5.𝟬.𝟬
-______________________________
+🎉 *Welcome to SUBZERO-BOT!* 🚀  
 
-Use your Session ID Above to Deploy your Bot.
-Check on YouTube Channel for Deployment Procedure(Ensure you have Github Account and Billed Heroku Account First.)
-Don't Forget To Give Star⭐ To My Repo`;
+🔒 *Your Session ID* is ready!  ⚠️ _Keep it private and secure — dont share it with anyone._ 
+
+🔑 *Copy & Paste the SESSION_ID Above*🛠️ Add it to your environment variable: *SESSION_ID*.  
+
+💡 *Whats Next?* 
+1️⃣ Explore all the cool features of Subzero MD.
+2️⃣ Stay updated with our latest releases and support.
+3️⃣ Enjoy seamless WhatsApp automation! 🤖  
+
+🔗 *Join Our Support Channel:* 👉 [Click Here to Join](https://whatsapp.com/channel/0029VagQEmB002T7MWo3Sj1D) 
+
+⭐ *Show Some Love!* Give us a ⭐ on GitHub and support the development: 👉 [SUBZERO-BOT GitHub Repo](https://github.com/mrfrank-ofc/)  
+
+🚀 _Thanks for choosing SUBZERO-BOT — Let the automation begin!_ ✨`;
 
                     await Gifted.sendMessage(Gifted.user.id, { text: GIFTED_TEXT }, { quoted: session });
 
